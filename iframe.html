@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #fullscreen-container {
+            height: 700px;
+            width: 600px;
+            overflow: hidden; /* Add this to hide overflowed content */
+            transition: transform 0.5s;
+        }
+
+        .img-slide {
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="fullscreen-container">
+    <img class="img-slide" src="images/mock_page-0001.jpg" onclick="toggleFullScreenImage()">
+</div> 
+<br>
+<img class="img-slide" src="images/mock_page-0002.jpg">
+
+<script>
+    var container = document.getElementById("fullscreen-container");
+    var currentImage = 0;
+
+    function toggleFullScreenImage() {
+        currentImage = (currentImage + 1) % 2; // Cycle between 0 and 1
+        container.style.transform = "translateX(-" + currentImage * 100 + "%)";
+    }
+</script>
+</body>
+</html>
+
