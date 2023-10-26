@@ -13,7 +13,8 @@
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
 </head>
 
 <body>
@@ -36,7 +37,8 @@
     <section class="home show-animate" id="home">
         <!-- home section design -->
           <div class="home-content">
-            <h1>HI IM <span>NaveenKumar</span><span class="animate" style="--i:2;"></span></h1>
+            <h1>HI I'M <span><span class="auto-type active-nav"></span>
+                <span class="animate" style="--i:2;"></span></h1>
             <div class="text-animate">
               <h3>INFORMATION TECHNOLOGY</h3>
               <span class="animate" style="--i:2;"></span>
@@ -379,6 +381,16 @@
         <span class="animate scroll" style="--i:6;"></span>
     </div>
     </footer>
+
+
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings:["NAVEENKUMAR P", "Developer", "Self Learner","Unique","Creative", "Empathetic" ], 
+            typeSpeed:100,
+            backSpeed:50,
+            loop:true
+        })
+    </script>
 
     <script src="js/script.js"></script>
 </body>
