@@ -985,26 +985,20 @@ width: 100%;
     }
     
 }
-/* Style the iframe container */
+
 #infoFrame {
-  display: none; /* Initially hide the iframe */
-  width: 50%;  /* Set the desired width for the right side */
-  height: 80vh; /* Adjust the height as needed (e.g., full viewport height) */
-  border: 1px solid #ccc; /* Add a border */
-  float: right; /* Float the iframe to the right */
+  display: none; 
+  width: 50%;  
+  height: 80vh; 
+  border: 1px solid #ccc; 
+  float: right; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   margin-left: 150px;
 }
-
-/* Style the iframe content (PDF viewer) */
 #infoFrame object {
   width: 50%;
   height: 100%;
 }
-
-/* Style any other elements as needed */
-
-/* Style the button container */
 .button-container {
     display: flex;
     justify-content:center;
@@ -1012,8 +1006,8 @@ width: 100%;
 }
 
 .read-more-button {
-    flex: 1; /* Take up available space */
-    white-space: nowrap; /* Prevent the text from wrapping to a new line */
+    flex: 1; 
+    white-space: nowrap;
     margin-right: -250px;
 }
 
@@ -1029,6 +1023,7 @@ width: 100%;
     width: 750px;
     margin-left: 100px;
 }
+
 
 
 
