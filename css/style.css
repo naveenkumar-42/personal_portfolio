@@ -40,6 +40,7 @@ body{
     align-items: center;
     z-index: 100;
     transition: .3s;
+    border: solid var(--text-color);
 }
 .header.sticky {
     background: var(--secondary-bg-color);
@@ -85,11 +86,16 @@ section{
     padding: 0 9%;
     margin-top: 1rem;
     background-position: 90% center;
-    background-repeat: no-repeat;}
+    background-repeat: no-repeat;
+    margin-top: 60px;
+    border: solid var(--text-color);
+}
 
 .home-content {
     max-width: 60rem;
     z-index: 99;
+    border: solid var(--text-color) ;
+    padding: 50px;
 }
 .home-content h1{
     position: relative;
@@ -272,6 +278,7 @@ width: 100%;
     gap: 2rem;
     background:var(--secondary-bg-color) ;
     padding-bottom: 6rem;
+    border: solid var(--text-color) 2px;
 }
 .heading{
     position: relative;
@@ -344,7 +351,9 @@ span {
     align-items: center;
     flex-direction: column;
     min-height: auto;
-    padding-bottom:5rem ;
+    padding-bottom:150px ;
+    border: solid var(--text-color);
+    margin-top: 100px;
 }
 
 .education .education-row{
@@ -437,6 +446,8 @@ padding-right: .5rem;
     min-height: auto;
     padding-bottom: 7rem;
     background: var(--secondary-bg-color);
+    height: 860px;
+    border: solid var(--text-color);
 }
 .skills h2 {
     display: inline-block;
@@ -593,6 +604,7 @@ padding-right: .5rem;
     border-radius: 8px;
     display: block;
     transition: transform 0.5s;
+    border: solid var(--main-color);
 }
 
 .layer {
@@ -650,6 +662,7 @@ padding-right: .5rem;
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
+    border: solid var(--text-color);
 }
 
 .contact form {
@@ -724,6 +737,7 @@ transition: .5s;}
     flex-wrap: wrap;
     padding: 2rem 9%;
     background: var(--secondary-bg-color);
+    border: solid var(--text-color);
 
 }
 .footer-text,
@@ -814,6 +828,11 @@ width: 100%;
 .footer.show-animate .animate.scroll   {
     transition-delay: calc(.3s * var(--i));
     width: 0;
+}
+
+.portfolio{
+    border: solid var(--text-color);
+    text-align: center;
 }
 
 @media (max-width:1200px){
@@ -1019,9 +1038,12 @@ width: 100%;
 
 
 #home_img{
-    height: 700px;
-    width: 750px;
-    margin-left: 100px;
+    height: 500px;
+    width: 38%;
+    margin-left: 200px;
+    padding: 20px;
+    border: solid var(--text-color);
+    border-radius: 30px;
 }
 
 
