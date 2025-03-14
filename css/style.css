@@ -444,7 +444,7 @@ padding-right: .5rem;
 }
 
 .skills {
-    min-height: auto;
+    min-height: 100hv;
     padding-bottom: 7rem;
     background: var(--secondary-bg-color);
     height: 860px;
@@ -661,9 +661,10 @@ padding-right: .5rem;
 }
 
 .contact {
-    min-height: auto;
+    min-height: 100hv;
     padding-bottom: 7rem;
     border: solid var(--text-color);
+    background: var(--secondary-bg-color);
 }
 
 .contact form {
@@ -736,9 +737,7 @@ transition: .5s;}
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem 9%;
-    background: var(--secondary-bg-color);
-    border: solid var(--text-color);
+    padding: 1.5rem 9%;
 
 }
 .footer-text,
@@ -816,8 +815,7 @@ width: 100%;
 
 .education .animate.scroll,
 .home .animate.scroll,
-.projects .animate.scroll,
-.contact .animate.scroll {
+.projects .animate.scroll {
     background: var(--bg-color);
 }
 
@@ -832,7 +830,6 @@ width: 100%;
 }
 
 .projects{
-    border: solid var(--text-color);
     text-align: center;
 }
 

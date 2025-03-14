@@ -18,19 +18,10 @@
 </head>
 <body>
 <div id="fullscreen-container">
-    <img class="img-slide" src="images/mock_page-0001.jpg" onclick="toggleFullScreenImage()">
+    <img class="img-slide" src="images/resume.png"  onclick="toggleFullScreenImage()">
 </div> 
 <br>
 
-<script>
-    var container = document.getElementById("fullscreen-container");
-    var currentImage = 0;
-
-    function toggleFullScreenImage() {
-        currentImage = (currentImage + 1) % 2; 
-        container.style.transform = "translateX(-" + currentImage * 100 + "%)";
-    }
-</script>
 </body>
 </html>
 
