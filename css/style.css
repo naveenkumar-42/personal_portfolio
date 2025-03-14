@@ -88,13 +88,13 @@ section{
     background-position: 90% center;
     background-repeat: no-repeat;
     margin-top: 60px;
-    border: solid var(--text-color);
+    /* border: solid var(--text-color); */
 }
 
 .home-content {
     max-width: 60rem;
     z-index: 99;
-    border: solid var(--text-color) ;
+    /* border: solid var(--text-color) ; */
     padding: 50px;
 }
 .home-content h1{
@@ -279,6 +279,7 @@ width: 100%;
     background:var(--secondary-bg-color) ;
     padding-bottom: 6rem;
     border: solid var(--text-color) 2px;
+    margin: 10px 0px;
 }
 .heading{
     position: relative;
@@ -350,10 +351,10 @@ span {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: auto;
+    min-height: 100hv;
     padding-bottom:150px ;
-    border: solid var(--text-color);
-    margin-top: 100px;
+    /* border: solid var(--text-color); */
+    margin: 10px 0px;
 }
 
 .education .education-row{
@@ -584,7 +585,7 @@ padding-right: .5rem;
 
 }
 
-.portfolio-content {
+.projects-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, auto));
     align-items: center;
@@ -815,7 +816,7 @@ width: 100%;
 
 .education .animate.scroll,
 .home .animate.scroll,
-.portfolio .animate.scroll,
+.projects .animate.scroll,
 .contact .animate.scroll {
     background: var(--bg-color);
 }
@@ -823,14 +824,14 @@ width: 100%;
 .about.show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
-.portfolio.show-animate .animate.scroll,
+.projects.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll   {
     transition-delay: calc(.3s * var(--i));
     width: 0;
 }
 
-.portfolio{
+.projects{
     border: solid var(--text-color);
     text-align: center;
 }
