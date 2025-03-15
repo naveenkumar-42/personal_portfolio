@@ -71,6 +71,11 @@ body{
     color: var(--main-color);
 }
 
+.active-nav{
+        background-color: var(--secondary-bg-color);
+}
+
+
 #menu-icon {
     position: f;
     font-size: 3.6rem;
@@ -158,6 +163,10 @@ section{
     z-index: -1;
 }
 
+.home-content .text-animate {
+    position: relative;
+    width: 32.8rem;
+}
 
 .btn-box {
     position: relative;
@@ -883,7 +892,7 @@ width: 100%;
     }
     
     .projects{
-        padding: 0px;
+        padding: 10px;
         width: 100vw;
     }
     .navbar .active-nav {
