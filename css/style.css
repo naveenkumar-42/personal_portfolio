@@ -73,6 +73,7 @@ body{
 
 .active-nav{
         background-color: var(--secondary-bg-color);
+        padding: .5rem;
 }
 
 
@@ -90,18 +91,17 @@ section{
 }
 
 .home {
-    display: flex;
+    /* display: flex; */
     align-items: center;
-    padding: 0 9%;
+    padding:9%;
     margin-top: 1rem;
-    background-position: 90% center;
-    background-repeat: no-repeat;
-    margin-top: 60px;
+    text-align: -webkit-center;
     /* border: solid var(--text-color); */
 }
 
 .home-content {
     max-width: 60rem;
+    align-items: center;
     z-index: 99;
     /* border: solid var(--text-color) ; */
     padding: 50px;
