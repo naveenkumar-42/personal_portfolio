@@ -115,7 +115,7 @@ section{
 
 .home-content .text-animate{ 
     position: relative;
-    width: 32.8rem;
+
 }
 
 .home-content .text-animate h3 {
@@ -258,21 +258,8 @@ section{
 width: 100%;
 }
 
-.home-imghover{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45%;
-    height:100% ;
-    background: transparent;
-    transition:3s;
 
-}
-
-.home-imghover:hover{
-    background:#081b29;
-    opacity: .8;
-}
+                            /* ABOUT PAGE */
 
 .about{
     display: flex;
@@ -294,6 +281,7 @@ width: 100%;
 span {
     color: var(--main-color);
 }
+
 .about-img{
     position: relative;
     width: 25rem;
@@ -350,6 +338,8 @@ span {
     background:var(--secondary-bg-color) ;
 }
 
+
+                    /* JOURENY */
 .education{
     display: flex;
     justify-content: center;
@@ -441,6 +431,8 @@ padding-right: .5rem;
     padding-top: .5rem;
 }
 
+                    /* SKILLS */
+
 .main-text h1{
     font-size: 4.5rem;
     position: relative;
@@ -475,9 +467,7 @@ padding-right: .5rem;
     margin: 20px;
 }
 
-.pro-img{
-    height: 250px;
-}
+
 
 
 .skills-column .title{
@@ -612,6 +602,10 @@ padding-right: .5rem;
 .pro-head{
     font-size: 18px;
     font-weight: bold;
+}
+
+.pro-img {
+    height: 250px;
 }
 
 .row {
@@ -1013,7 +1007,7 @@ width: 100%;
 #infoFrame {
   display: none; 
   width: 50%;  
-  height: 80vh; 
+  height: 60vh; 
   border: 1px solid #ccc; 
   float: right; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
