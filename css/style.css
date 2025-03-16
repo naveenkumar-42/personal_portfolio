@@ -95,8 +95,8 @@ body {
 }
 
 .active-nav {
-    background-color: var(--secondary-bg-color);
     padding: 1rem;
+    background: var(--secondary-bg-color);
 }
 
 
@@ -880,7 +880,7 @@ span {
 .logo .animate,
 .navbar .animate,
 #menu-icon .animate,
-.home.show-animate .animate {
+.home.show-animate .animate-h {
     animation: showRight 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
 }
@@ -907,6 +907,15 @@ span {
     width: 0;
 }
 
+.animate-h{
+        position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            z-index: 98;
+}
 
 
 
