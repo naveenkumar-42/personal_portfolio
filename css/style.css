@@ -34,7 +34,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 95vw;
+    width: 98vw;
     margin: 10px;
     margin-right: 30px;
     padding: 2rem 9%;
@@ -904,6 +904,7 @@ span {
 @media (max-width:768px) {
     .header {
         background: var(--secondary-bg-color);
+        width: 95vw;
     }
 
     #menu-icon {
