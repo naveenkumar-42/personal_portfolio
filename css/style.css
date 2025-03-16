@@ -1009,6 +1009,10 @@ span {
         margin: 10px;
     }
 
+    .row{
+        width: 95vw;
+    }
+
     #background-video {
         position: absolute;
         top: 50%;
