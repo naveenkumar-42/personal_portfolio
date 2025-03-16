@@ -54,7 +54,7 @@ body {
     left: 0;
     width: 98vw;
     margin: 10px;
-    opacity:.8;
+    opacity: .8;
     margin-right: 30px;
     padding: 2rem 9%;
     background: transparent;
@@ -75,7 +75,7 @@ body {
     position: relative;
     font-size: 1.7rem;
     color: var(--text-color);
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .navbar {
@@ -126,8 +126,10 @@ section {
     max-width: 60rem;
     align-items: center;
     z-index: 99;
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
     margin-top: 8rem;
-    /* border: solid var(--text-color) ; */
+    border: black;
     padding: 50px;
 }
 
@@ -304,28 +306,28 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: row;
+    /* Change from column to row to split the section */
+    gap: 4rem;
     background: var(--secondary-bg-color);
-    padding-bottom: 6rem;
+    padding: 6rem 2rem;
     border: solid var(--text-color) 2px;
     margin: 10px 0px;
 }
 
 .about-content-h {
-    width: 60vw;
+    width: 45vw;
+    /* Make both sections occupy half the space */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
-
 
 .heading {
     position: relative;
-    font-size: 5rem;
-    margin-bottom: 3rem;
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -335,8 +337,8 @@ span {
 
 .about-img {
     position: relative;
-    width: 25rem;
-    height: 25rem;
+    width: 20rem;
+    height: 20rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -350,21 +352,6 @@ span {
     border: .2rem solid var(--main-color);
 }
 
-.about-img .circle-spin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border-top: .2rem solid var(--secondary-bg-color);
-    border-bottom: .2rem solid var(--secondary-bg-color);
-    border-left: .2rem solid var(--main-color);
-    border-right: .2rem solid var(--main-color);
-    animation: aboutSpinner 8s linear infinite;
-}
-
 .about-content {
     text-align: center;
 }
@@ -376,18 +363,60 @@ span {
 }
 
 .about-content p {
-    position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
 
-.btn-box.btns {
-    display: inline-block;
-    width: 15rem;
+/* New Section for GitHub & LeetCode */
+.about-extra {
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.btn-box.btns a::before {
-    background: var(--secondary-bg-color);
+.github-section,
+.leetcode-section {
+    margin-top: 2rem;
+}
+
+.github-section h3,
+.leetcode-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.github-section img,
+.leetcode-section img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.btn-box-a {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    height: 5rem;
+}
+
+.btn-box-a .btn-a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
 }
 
 
@@ -810,6 +839,48 @@ span {
 
 }
 
+.btn-box-c {
+    gap: 2rem;
+    height: 5rem;
+}
+
+.btn-box-c .btn-c {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 100%;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--secondary-bg-color);
+    border-bottom: .2rem solid var(--secondary-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+    animation: 8s linear 0s infinite normal none running aboutSpinner;
+}
+
+
+/* footer */
+
 .footer {
     display: flex;
     justify-content: space-between;
@@ -907,14 +978,14 @@ span {
     width: 0;
 }
 
-.animate-h{
-        position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: black;
-            z-index: 98;
+.animate-h {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 98;
 }
 
 
@@ -926,6 +997,10 @@ span {
         width: 95vw;
     }
 
+    .home-content {
+        margin-top: 0rem;
+    }
+
     #menu-icon {
         display: block;
     }
@@ -934,18 +1009,19 @@ span {
         margin: 10px;
     }
 
-#background-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Ensures the video covers the entire container */
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    background-size: cover;
-}
+    #background-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures the video covers the entire container */
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        background-size: cover;
+    }
+
     .navbar {
         position: absolute;
         top: 100%;
@@ -963,14 +1039,24 @@ span {
         display: none;
     }
 
-    .read-more-button {
-        margin-right: -230px;
-    }
-
     .navbar.active {
         transition-delay: 0s;
         left: 0;
 
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        height: 100hv;
+    }
+
+    .about-content-h {
+        width: 100%;
+    }
+
+    .about-extra {
+        width: 100%;
     }
 
     .projects {
@@ -1033,8 +1119,8 @@ span {
 
     }
 
-    .home-content h3{
-        font-size: 3rem ;
+    .home-content h3 {
+        font-size: 3rem;
     }
 
     .home-content p {
