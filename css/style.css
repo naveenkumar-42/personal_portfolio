@@ -7,7 +7,7 @@
     text-decoration: none;
     border: none;
     outline: none;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth ;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -239,12 +239,7 @@ section {
 }
 
 .home-sci {
-    position: absolute;
-    bottom: 4rem;
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
-
+    margin: 20px;
 }
 
 .home-sci a:hover {
@@ -910,6 +905,10 @@ span {
     #menu-icon {
         display: block;
     }
+
+        .home-sci {
+            margin: 10px;
+        }
 
     .navbar {
         position: absolute;
