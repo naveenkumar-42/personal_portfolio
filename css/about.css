@@ -1,0 +1,176 @@
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* Change from column to row to split the section */
+  gap: 4rem;
+  background: var(--secondary-bg-color);
+  padding: 6rem 2rem;
+  border: solid var(--text-color) 2px;
+  margin: 10px 0px;
+}
+
+.about-content-h {
+  width: 45vw;
+  /* Make both sections occupy half the space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  position: relative;
+  font-size: 4.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  cursor: context-menu;
+
+}
+
+.heading:hover {
+  text-shadow: 0px 0px 10px var(--text-color);
+}
+
+span {
+  color: var(--main-color);
+}
+
+.about-img {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img img {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  border: .2rem solid var(--main-color);
+}
+
+.about-content {
+  text-align: center;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+  position: relative;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+.about-img .circle-spin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  border-radius: 50%;
+  border-top: .2rem solid var(--secondary-bg-color);
+  border-bottom: .2rem solid var(--secondary-bg-color);
+  border-left: .2rem solid var(--main-color);
+  border-right: .2rem solid var(--main-color);
+  animation: 6s linear 0s infinite normal none running aboutSpinner;
+  box-shadow: 0 0 3px 0px var(--secondary-bg-color),
+    0 0 20px 1px var(--main-color);
+  transition: transform 0.5s;
+
+}
+
+.about-img .circle-spin:hover {
+  transform: translate(-50%, -50%) rotate(0deg) scale(1.1);
+
+}
+
+.btn-box-a .btn-a:hover {
+  color: var(--main-color);
+  background-color: var(--secondary-bg-color);
+  box-shadow: 0px 0px 15px 2px var(--main-color);
+}
+
+.btn-box-c .btn-c:hover {
+  color: var(--main-color);
+  background-color: var(--secondary-bg-color);
+  box-shadow: 0px 0px 15px 2px var(--main-color);
+}
+
+/* New Section for GitHub & LeetCode */
+.about-extra {
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heading-a {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.github-section,
+.leetcode-section {
+  margin-top: 2rem;
+}
+
+.github-section h3,
+.leetcode-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.github-section img,
+.leetcode-section img {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: rgb(31, 29, 29);
+  transition: .5s;
+}
+
+.github-section img:hover,
+.leetcode-section img:hover {
+  box-shadow: 0px 0px 15px 2px var(--main-color);
+  transform: scale(1.1);
+  ;
+}
+
+.btn-box-a {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  height: 5rem;
+}
+
+.btn-box-a .btn-a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 100%;
+  background: var(--main-color);
+  border: .2rem solid var(--main-color);
+  border-radius: .8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
+  color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: .5s;
+}

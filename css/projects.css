@@ -1,0 +1,100 @@
+.projects {
+  text-align: center;
+  align-items: center;
+  height: 100hv;
+  width: 100vw;
+}
+
+.projects-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, auto));
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 10rem;
+}
+
+.pro-head {
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0px 0px 20px var(--text-color);
+}
+
+.pro-img {
+  height: 250px;
+  box-shadow: 0px 0px 13px 8px var(--text-color);
+}
+
+.row {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 90%;
+}
+
+.row img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.5s;
+  box-shadow: 0px 0px 13px 8px var(--text-color);
+  border: solid var(--text-color);
+}
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgb(0 0 0 / 50%), #0d1b28);
+  position: absolute;
+  border-radius: 8px;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px;
+  transition: height 0.5s;
+}
+
+.layer h5 {
+  font: 50px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-shadow: 0px 0px 20px var(--main-color);
+}
+
+.layer p {
+  color: var(--second-color);
+  font-size: 1rem;
+  line-height: 1.8;
+
+}
+
+.layer i {
+  color: var(--secondary-bg-color);
+  margin-top: 20px;
+  font-size: 20px;
+  background: var(--text-color);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: .5s;
+
+}
+
+.layer i:hover {
+  box-shadow: 0px 0px 20px 5px var(--text-color);
+}
+
+.row:hover img {
+  transform: scale(.5);
+
+}
+
+.row:hover .layer {
+  height: 100%;
+}

@@ -1,0 +1,101 @@
+.education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100hv;
+  padding-bottom: 150px;
+  /* border: solid var(--text-color); */
+  margin: 10px 0px;
+}
+
+.education .education-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.education-row .education-column {
+  flex: 1 1 40rem;
+}
+
+.education-column .title {
+
+  position: relative;
+  font-size: 2.3rem;
+  margin: 0 0 1.5rem 2rem;
+}
+
+.education-column .education-box {
+  position: relative;
+  border-left: .2rem solid var(--main-color);
+}
+
+.education-box .education-content {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.education-box .education-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1.1rem;
+  width: 2rem;
+  height: 2rem;
+  background: var(--main-color);
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px 2px var(--main-color);
+
+}
+
+.education-content .content {
+  position: relative;
+  padding: 1.5rem;
+  border: .2rem solid var(--main-color);
+  border-radius: .6rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.education-content .content:hover {
+  box-shadow: 0px 0px 15px 2px var(--main-color);
+}
+
+.education-content .content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--secondary-bg-color);
+  z-index: -1;
+  transition: .5s;
+  box-shadow: 0px 0px 15px 2px var(--text-color);
+}
+
+.education-content .content:hover::before {
+  width: 100%;
+  box-shadow: 0px 0px 15px 2px var(--main-color);
+
+}
+
+.education-content .content .year {
+  font-size: 1.5rem;
+  color: var(--main-color);
+  padding-bottom: .7rem;
+}
+
+.education-content .content .year i {
+  padding-right: .5rem;
+}
+
+.education-content .content h3 {
+  font-size: 2rem;
+}
+
+.education-content .content p {
+  font-size: 1.6rem;
+  padding-top: .5rem;
+}
