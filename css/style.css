@@ -238,12 +238,15 @@ section {
 
 }
 
-.btn-box .btn:hover {
+.btn-a .btn:hover {
     color: var(--main-color);
-
 }
 
-.btn-box .btn::before {
+.btn-c .btn:hover {
+    color: var(--main-color);
+}
+
+.btn::before {
     content: '';
     position: absolute;
     top: 0;
@@ -255,7 +258,7 @@ section {
     transition: .5s;
 }
 
-.btn-box .btn:hover::before {
+.btn:hover::before {
     width: 100%;
 }
 
@@ -367,6 +370,16 @@ span {
     margin: 2rem 0 3rem;
 }
 
+.btn-box-a .btn-a:hover {
+    color: var(--main-color);
+    background-color: var(--secondary-bg-color);
+}
+
+.btn-box-c .btn-c:hover {
+    color: var(--main-color);
+    background-color: var(--secondary-bg-color);
+}
+
 /* New Section for GitHub & LeetCode */
 .about-extra {
     width: 45vw;
@@ -390,7 +403,9 @@ span {
 .github-section img,
 .leetcode-section img {
     width: 100%;
+    padding: 1.5rem;
     border-radius: 10px;
+    background-color: rgb(31, 29, 29);
 }
 
 .btn-box-a {
@@ -405,7 +420,7 @@ span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 15rem;
+    padding: 10px;
     height: 100%;
     background: var(--main-color);
     border: .2rem solid var(--main-color);
@@ -969,6 +984,7 @@ span {
 }
 
 .about.show-animate .animate.scroll,
+.about-extra .show-animate .animate.scroll,
 .education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
 .projects.show-animate .animate.scroll,
@@ -989,6 +1005,11 @@ span {
 }
 
 
+@media (max-width:900px) {
+    #background-video {
+        min-width: 100vw;
+    }
+}
 
 
 @media (max-width:768px) {
@@ -1009,8 +1030,12 @@ span {
         margin: 10px;
     }
 
-    .row{
+    .row {
         width: 95vw;
+    }
+
+    .navbar .animate {
+        background-color: black;
     }
 
     #background-video {
@@ -1119,12 +1144,12 @@ span {
 
 @media (max-width:460px) {
     .home-content h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
 
     }
 
-    .home-content h3 {
-        font-size: 3rem;
+    .home-content .text-animate h3 {
+        font-size: 2.5rem;
     }
 
     .home-content p {
@@ -1212,46 +1237,4 @@ span {
         width: 0;
     }
 
-}
-
-#infoFrame {
-    display: none;
-    width: 50%;
-    height: 60vh;
-    border: 1px solid #ccc;
-    float: right;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    margin-left: 150px;
-}
-
-#infoFrame object {
-    width: 50%;
-    height: 100%;
-}
-
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.read-more-button {
-
-    margin-right: -250px;
-}
-
-.download-button {
-    flex: 0;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-
-#home_img {
-    height: 500px;
-    width: 38%;
-    margin-left: 200px;
-    padding: 20px;
-    border: solid var(--text-color);
-    border-radius: 30px;
 }
