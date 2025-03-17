@@ -30,6 +30,10 @@ body {
     color: var(--text-color);
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .home-back {
     height: 100vh;
     width: 100vw;
@@ -52,7 +56,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 98vw;
+    width: 99vw;
     margin: 10px;
     opacity: .8;
     margin-right: 30px;
@@ -236,6 +240,10 @@ section {
 .btn-box .btn:nth-child(2):hover {
     color: var(--bg-color);
 
+}
+
+.btn-box .btn:hover {
+    color: var(--main-color);
 }
 
 .btn-a .btn:hover {
@@ -694,7 +702,7 @@ span {
 
 .projects-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(50rem,auto));
     align-items: center;
     gap: 2.5rem;
     margin-top: 10rem;
@@ -707,6 +715,7 @@ span {
 
 .pro-img {
     height: 250px;
+        box-shadow: 0px 0px 13px 8px var(--text-color);
 }
 
 .row {
@@ -722,6 +731,7 @@ span {
     border-radius: 8px;
     display: block;
     transition: transform 0.5s;
+    box-shadow: 0px 0px 13px 8px var(--text-color);
     border: solid var(--text-color);
 }
 
@@ -890,7 +900,9 @@ span {
     border-bottom: .2rem solid var(--secondary-bg-color);
     border-left: .2rem solid var(--main-color);
     border-right: .2rem solid var(--main-color);
-    animation: 8s linear 0s infinite normal none running aboutSpinner;
+    animation: 6s linear 0s infinite normal none running aboutSpinner;
+    box-shadow: 0 0 3px 0px var(--secondary-bg-color),
+        0 0 20px 1px var(--main-color);
 }
 
 
