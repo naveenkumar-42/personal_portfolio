@@ -80,6 +80,7 @@ body::-webkit-scrollbar {
     font-size: 1.7rem;
     color: var(--text-color);
     font-weight: 800;
+    text-shadow: 0px 0px 20px var(--main-color);
 }
 
 .navbar {
@@ -96,6 +97,7 @@ body::-webkit-scrollbar {
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
+    text-shadow: 0px 0px 20px var(--main-color);
 }
 
 .active-nav {
@@ -131,10 +133,11 @@ section {
     align-items: center;
     z-index: 99;
     backdrop-filter: blur(8px);
-    border-radius: 10px;
+    border-radius: 20px;
     margin-top: 8rem;
     border: black;
     padding: 50px;
+    box-shadow: 0px 0px 20px 0px #4c5151;
 }
 
 .home-content h1 {
@@ -239,19 +242,22 @@ section {
 
 .btn-box .btn:nth-child(2):hover {
     color: var(--bg-color);
-
+    box-shadow: 0px 0px 15px 2px var(--main-color);
 }
 
 .btn-box .btn:hover {
     color: var(--main-color);
+    box-shadow: 0px 0px 15px 2px var(--main-color);
 }
 
 .btn-a .btn:hover {
     color: var(--main-color);
+    box-shadow: 0px 0px 15px 2px var(--main-color);
 }
 
 .btn-c .btn:hover {
     color: var(--main-color);
+    box-shadow: 0px 0px 15px 2px var(--main-color);
 }
 
 .btn::before {
@@ -276,6 +282,7 @@ section {
 
 .home-sci a:hover {
     color: var(--bg-color);
+    box-shadow: 0px 0px 15px 2px var(--main-color);
 }
 
 .home-sci a {
@@ -371,6 +378,7 @@ span {
     font-size: 2.6rem;
     position: relative;
     display: inline-block;
+    margin-top: 2rem;
 }
 
 .about-content p {
@@ -378,14 +386,40 @@ span {
     margin: 2rem 0 3rem;
 }
 
+.about-img .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--secondary-bg-color);
+    border-bottom: .2rem solid var(--secondary-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+    animation: 6s linear 0s infinite normal none running aboutSpinner;
+    box-shadow: 0 0 3px 0px var(--secondary-bg-color),
+        0 0 20px 1px var(--main-color);
+    transition: transform 0.5s;
+    /* Smooth transition for both hover in and out */
+}
+
+.about-img .circle-spin:hover {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.2);
+    /* Zoom in effect */
+}
+
 .btn-box-a .btn-a:hover {
     color: var(--main-color);
     background-color: var(--secondary-bg-color);
+    box-shadow: 0px 0px 15px 2px var(--main-color);
 }
 
 .btn-box-c .btn-c:hover {
     color: var(--main-color);
     background-color: var(--secondary-bg-color);
+    box-shadow: 0px 0px 15px 2px var(--main-color);
 }
 
 /* New Section for GitHub & LeetCode */
@@ -394,6 +428,12 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+}
+
+.heading-a {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -414,6 +454,7 @@ span {
     padding: 1.5rem;
     border-radius: 10px;
     background-color: rgb(31, 29, 29);
+    box-shadow: 0px 0px 15px 2px var(--main-color);
 }
 
 .btn-box-a {
@@ -592,6 +633,7 @@ span {
     padding: .5rem 1.5rem;
     z-index: 1;
     overflow: hidden;
+    box-shadow: 0px 0px 15px 2px var(--main-color);
 }
 
 .skills-box .skills-content::before {
@@ -702,7 +744,7 @@ span {
 
 .projects-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50rem,auto));
+    grid-template-columns: repeat(auto-fit, minmax(50rem, auto));
     align-items: center;
     gap: 2.5rem;
     margin-top: 10rem;
@@ -715,7 +757,7 @@ span {
 
 .pro-img {
     height: 250px;
-        box-shadow: 0px 0px 13px 8px var(--text-color);
+    box-shadow: 0px 0px 13px 8px var(--text-color);
 }
 
 .row {
@@ -888,22 +930,7 @@ span {
     transition: .5s;
 }
 
-.about-img .circle-spin {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0deg);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border-top: .2rem solid var(--secondary-bg-color);
-    border-bottom: .2rem solid var(--secondary-bg-color);
-    border-left: .2rem solid var(--main-color);
-    border-right: .2rem solid var(--main-color);
-    animation: 6s linear 0s infinite normal none running aboutSpinner;
-    box-shadow: 0 0 3px 0px var(--secondary-bg-color),
-        0 0 20px 1px var(--main-color);
-}
+
 
 
 /* footer */
