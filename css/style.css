@@ -347,6 +347,12 @@ section {
     font-size: 4.5rem;
     margin-bottom: 2rem;
     text-align: center;
+    cursor: context-menu;
+
+}
+
+.heading:hover {
+    text-shadow: 0px 0px 10px var(--text-color);
 }
 
 span {
@@ -393,6 +399,7 @@ span {
     transform: translate(-50%, -50%) rotate(0deg);
     width: 100%;
     height: 100%;
+    padding: 40px;
     border-radius: 50%;
     border-top: .2rem solid var(--secondary-bg-color);
     border-bottom: .2rem solid var(--secondary-bg-color);
@@ -402,12 +409,12 @@ span {
     box-shadow: 0 0 3px 0px var(--secondary-bg-color),
         0 0 20px 1px var(--main-color);
     transition: transform 0.5s;
-    /* Smooth transition for both hover in and out */
+
 }
 
 .about-img .circle-spin:hover {
-    transform: translate(-50%, -50%) rotate(0deg) scale(1.2);
-    /* Zoom in effect */
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.1);
+
 }
 
 .btn-box-a .btn-a:hover {
@@ -454,7 +461,14 @@ span {
     padding: 1.5rem;
     border-radius: 10px;
     background-color: rgb(31, 29, 29);
+    transition: .5s;
+}
+
+.github-section img:hover,
+.leetcode-section img:hover {
     box-shadow: 0px 0px 15px 2px var(--main-color);
+    transform: scale(1.1);
+    ;
 }
 
 .btn-box-a {
@@ -532,6 +546,7 @@ span {
     height: 2rem;
     background: var(--main-color);
     border-radius: 50%;
+    box-shadow: 0px 0px 15px 2px var(--main-color);
 
 }
 
@@ -544,6 +559,10 @@ span {
     overflow: hidden;
 }
 
+.education-content .content:hover {
+    box-shadow: 0px 0px 15px 2px var(--main-color);
+}
+
 .education-content .content::before {
     content: '';
     position: absolute;
@@ -554,10 +573,13 @@ span {
     background: var(--secondary-bg-color);
     z-index: -1;
     transition: .5s;
+    box-shadow: 0px 0px 15px 2px var(--text-color);
 }
 
 .education-content .content:hover::before {
     width: 100%;
+    box-shadow: 0px 0px 15px 2px var(--main-color);
+
 }
 
 .education-content .content .year {
@@ -633,6 +655,10 @@ span {
     padding: .5rem 1.5rem;
     z-index: 1;
     overflow: hidden;
+    transition: .5s;
+}
+
+.skills-box .skills-content:hover {
     box-shadow: 0px 0px 15px 2px var(--main-color);
 }
 
@@ -753,6 +779,7 @@ span {
 .pro-head {
     font-size: 18px;
     font-weight: bold;
+    text-shadow: 0px 0px 20px 20px var(--text-color);
 }
 
 .pro-img {
@@ -797,6 +824,7 @@ span {
     font: 50px;
     font-weight: 600;
     margin-bottom: 15px;
+    text-shadow: 0px 0px 20px 20px var(--text-color);
 }
 
 .layer p {
@@ -817,7 +845,12 @@ span {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    transition: .5s;
 
+}
+
+.layer i:hover {
+    box-shadow: 0px 0px 20px 5px var(--text-color);
 }
 
 .row:hover img {
