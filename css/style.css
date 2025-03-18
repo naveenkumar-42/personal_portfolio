@@ -120,11 +120,12 @@ section {
 }
 
 .home {
-    /* display: flex; */
+    display: flex;
     align-items: center;
     padding: 9%;
-    margin-top: 1rem;
-    text-align: -webkit-center;
+    justify-content: center;
+    /* margin-top: 1rem; */
+    text-align: center;
     /* border: solid var(--text-color); */
 }
 
@@ -134,7 +135,6 @@ section {
     z-index: 99;
     backdrop-filter: blur(8px);
     border-radius: 20px;
-    margin-top: 8rem;
     border: black;
     padding: 50px;
     box-shadow: 0px 0px 20px 0px #4c5151;
@@ -204,11 +204,8 @@ section {
 }
 
 .btn-box {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+    margin: 10px;
     gap: 2rem;
-    width: 28rem;
     height: 5rem;
 }
 
@@ -217,6 +214,7 @@ section {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    margin: .5rem;
     width: 15rem;
     height: 100%;
     background: var(--main-color);
@@ -331,6 +329,9 @@ section {
 .logo .animate,
 .navbar .animate,
 #menu-icon .animate,
+.education.show-animate .animate-h.scroll,
+.projects.show-animate .animate-h.scroll,
+.footer.show-animate .animate-h.scroll,
 .home.show-animate .animate-h {
     animation: showRight 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
@@ -342,16 +343,14 @@ section {
     transition-delay: calc(.3s * var(--i));
 }
 
-.education .animate.scroll,
 .home .animate.scroll,
 .projects .animate.scroll {
     background: var(--bg-color);
 }
 
 .about.show-animate .animate.scroll,
-.education.show-animate .animate-h.scroll,
+
 .skills.show-animate .animate.scroll,
-.projects.show-animate .animate-h.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll {
     transition-delay: calc(.3s * var(--i));
@@ -382,13 +381,10 @@ section {
         width: 95vw;
     }
 
-    .home-content {
-        margin-top: 0rem;
-    }
-
     #menu-icon {
         display: block;
     }
+
 
     .home-sci {
         margin: 10px;
@@ -510,6 +506,10 @@ section {
     .home-content h1 {
         font-size: 3rem;
 
+    }
+
+    .btn-box {
+        display: flex;
     }
 
     .home-content .text-animate h3 {
