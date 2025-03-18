@@ -59,5 +59,32 @@ $(document).ready(function() {
   
 
 
+    (function() {
+        emailjs.init("EFhHBlGQHefpPjFFr"); // Replace with your EmailJS Public Key
+    })();
 
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+    // Get form values
+    const firstName = document.querySelector("input[name='First Name']").value;
+    const lastName = document.querySelector("input[name='Last Name']").value;
+    const mobile = document.querySelector("input[name='Mobile Number']").value;
+    const email = document.querySelector("input[name='Email address']").value;
+    const message = document.querySelector("textarea[name='Message']").value;
+
+    // Send email using EmailJS
+        emailjs.send("service_ekxptjv", "template_2y3fzn4", {
+        first_name: firstName,
+    last_name: lastName,
+    mobile_number: mobile,
+    email_address: email,
+    message: message
+        }).then(function(response) {
+        alert("Email sent successfully. Thanks for your feedback !");
+    document.getElementById("contact-form").reset(); // Clear the form
+        }, function(error) {
+        alert("Failed to send email: " + error);
+        });
+    });
 
