@@ -43,7 +43,7 @@
   left: -1.1rem;
   width: 2rem;
   height: 2rem;
-  background: var(--main-color);
+  background: var(--text-color);
   border-radius: 50%;
   box-shadow: 0px 0px 15px 2px var(--main-color);
 

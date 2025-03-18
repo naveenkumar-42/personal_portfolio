@@ -102,7 +102,7 @@
   display: block;
   height: 100%;
   border-radius: .3rem;
-  background-color: var(--main-color);
+  background-color: var(--text-color);
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
