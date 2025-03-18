@@ -19,15 +19,15 @@ window.onscroll = () => {
         if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-            
-            document.querySelector('header nav a[href*="' + id + '"]').classList.add('active');
-        });
-        sec.classList.add('show-animate');
-    }
-    else{
-        sec.classList.remove('show-animate');
+
+                document.querySelector('header nav a[href*="' + id + '"]').classList.add('active');
+            });
+            sec.classList.add('show-animate');
         }
-        
+        else {
+            sec.classList.remove('show-animate');
+        }
+
     });
 
     let header = document.querySelector('header');
@@ -37,34 +37,34 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 
     let footer = document.querySelector('footer');
-    footer.classList.toggle('show-animate',this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
+    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 };
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     var readMoreButton = $("#download");
     var infoFrame = $("#infoFrame");
     infoFrame.hide();
-    readMoreButton.on("click", function(event) {
-      event.preventDefault();
-      console.log("Button clicked");
-      infoFrame.attr("src", "iframe.html");
-      infoFrame.show();
-      $("#home_img").hide();
-      $('html, body').animate({
-        scrollTop: $('#home').offset().top
-      }, 1000);
-    });
-  });
-  
-
-
-    (function() {
-        emailjs.init("EFhHBlGQHefpPjFFr"); 
-    })();
-
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
+    readMoreButton.on("click", function (event) {
         event.preventDefault();
+        console.log("Button clicked");
+        infoFrame.attr("src", "iframe.html");
+        infoFrame.show();
+        $("#home_img").hide();
+        $('html, body').animate({
+            scrollTop: $('#home').offset().top
+        }, 1000);
+    });
+});
+
+
+
+(function () {
+    emailjs.init("EFhHBlGQHefpPjFFr");
+})();
+
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault();
 
 
     const firstName = document.querySelector("input[name='First Name']").value;
@@ -74,17 +74,28 @@ $(document).ready(function() {
     const message = document.querySelector("textarea[name='Message']").value;
 
 
-        emailjs.send("service_ekxptjv", "template_2y3fzn4", {
+    emailjs.send("service_ekxptjv", "template_2y3fzn4", {
         first_name: firstName,
-    last_name: lastName,
-    mobile_number: mobile,
-    email_address: email,
-    message: message
-        }).then(function(response) {
+        last_name: lastName,
+        mobile_number: mobile,
+        email_address: email,
+        message: message
+    }).then(function (response) {
         alert("Email sent successfully. Thanks for your feedback !");
-            document.getElementById("contact-form").reset();
-        }, function (error) {
+        document.getElementById("contact-form").reset();
+    }, function (error) {
         alert("Failed to send email ! Please try again later.");
-        });
     });
+});
 
+
+
+// Duplicate slider content for smooth infinite loop effect
+const sliderTrack = document.querySelector(".slider-track");
+const slides = document.querySelectorAll(".slide");
+
+// Clone slides to create an infinite effect
+slides.forEach(slide => {
+    let clone = slide.cloneNode(true);
+    sliderTrack.appendChild(clone);
+});

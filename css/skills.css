@@ -156,3 +156,64 @@
   width: 75%;
 
 }
+
+/* Icon Slider Styles */
+.icon-slider {
+  width: 70%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 3rem;
+  padding: 20px 0;
+  background: var(--secondary-bg-color);
+  border-top: 2px solid var(--text-color);
+  border-bottom: 2px solid var(--text-color);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 15%, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0));
+}
+
+/* Wrapping the slider track for smooth looping */
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-track {
+  display: flex;
+  gap: 3rem;
+  width: calc(150px * 40);
+  /* Adjust width for duplicate items */
+  animation: scroll 10s linear infinite;
+}
+
+/* Individual Slide */
+.slide {
+  min-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide svg {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform .1s ease-in-out;
+}
+
+.slide svg:hover {
+  transform: scale(1.2);
+}
+
+/* Infinite Scrolling Effect */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-20%);
+    /* Adjusted for seamless looping */
+  }
+}

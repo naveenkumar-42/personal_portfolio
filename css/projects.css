@@ -3,6 +3,7 @@
   align-items: center;
   height: 100hv;
   width: 100vw;
+  background-color: rgba(17, 46, 66, 0.3);
 }
 
 .projects-content {

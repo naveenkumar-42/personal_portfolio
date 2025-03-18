@@ -7,6 +7,7 @@
   padding-bottom: 150px;
   /* border: solid var(--text-color); */
   margin: 10px 0px;
+  background-color: rgba(17, 46, 66, 0.3);
 }
 
 .education .education-row {

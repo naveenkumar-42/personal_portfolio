@@ -47,6 +47,7 @@ body::-webkit-scrollbar {
     min-height: 100%;
     width: auto;
     height: auto;
+    opacity: .9;
     z-index: -1;
     transform: translate(-50%, -50%);
     background-size: cover;
@@ -101,7 +102,6 @@ body::-webkit-scrollbar {
 }
 
 .active-nav {
-    padding: 1rem;
     background: var(--secondary-bg-color);
 }
 
@@ -131,6 +131,7 @@ section {
 
 .home-content {
     max-width: 60rem;
+    margin: 1rem 5rem;
     align-items: center;
     z-index: 99;
     backdrop-filter: blur(8px);
@@ -329,8 +330,8 @@ section {
 .logo .animate,
 .navbar .animate,
 #menu-icon .animate,
-.education.show-animate .animate-h.scroll,
-.projects.show-animate .animate-h.scroll,
+.education.show-animate .animate-b.scroll,
+.projects.show-animate .animate-b.scroll,
 .footer.show-animate .animate-h.scroll,
 .home.show-animate .animate-h {
     animation: showRight 1s ease forwards;
@@ -364,6 +365,16 @@ section {
     width: 100%;
     height: 100%;
     background: black;
+    z-index: 10;
+}
+
+.animate-b {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #061017;
     z-index: 10;
 }
 
