@@ -3,6 +3,7 @@
   padding-bottom: 7rem;
   border: solid var(--text-color);
   background: var(--secondary-bg-color);
+  opacity: .9;
 }
 
 .contact form {
