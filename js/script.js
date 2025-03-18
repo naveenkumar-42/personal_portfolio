@@ -84,7 +84,7 @@ $(document).ready(function() {
         alert("Email sent successfully. Thanks for your feedback !");
             document.getElementById("contact-form").reset();
         }, function (error) {
-        alert("Failed to send email: " + error);
+        alert("Failed to send email ! Please try again later.");
         });
     });
 

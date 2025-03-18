@@ -40,7 +40,7 @@ body::-webkit-scrollbar {
 }
 
 #background-video {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     min-width: 100%;
@@ -349,9 +349,9 @@ section {
 }
 
 .about.show-animate .animate.scroll,
-.education.show-animate .animate-h.scroll,
+.education.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
-.projects.show-animate .animate-h.scroll,
+.projects.show-animate .animate.scroll,
 .contact.show-animate .animate.scroll,
 .footer.show-animate .animate.scroll {
     transition-delay: calc(.3s * var(--i));
