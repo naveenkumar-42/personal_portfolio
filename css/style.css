@@ -13,10 +13,15 @@
 
 :root {
 
-    --bg-color: #081b29;
+    /* --bg-color: #081b29;
     --secondary-bg-color: #112e42;
     --text-color: #E0FFFF;
-    --main-color: #00FA9A;
+    --main-color: #00FA9A; */
+
+    --bg-color: #222831;
+    --secondary-bg-color: #393E46;
+    --text-color: #EEEEEE;
+    --main-color: #00ADB5;
 }
 
 html {
