@@ -427,6 +427,10 @@ section {
         background-size: cover;
     }
 
+    .home.show-animate .home-content .text-animate h3::before {
+        display: none;
+    }
+
     .navbar {
         position: absolute;
         top: 100%;
