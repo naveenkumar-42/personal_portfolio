@@ -90,12 +90,19 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 
 
 
-// Duplicate slider content for smooth infinite loop effect
 const sliderTrack = document.querySelector(".slider-track");
 const slides = document.querySelectorAll(".slide");
 
-// Clone slides to create an infinite effect
 slides.forEach(slide => {
     let clone = slide.cloneNode(true);
     sliderTrack.appendChild(clone);
 });
+
+
+
+var typed = new Typed(".auto-type", {
+    strings: ["Naveen kumar", "Developer", "Self Learner", "Unique", "Creative", "Empathetic"],
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true
+})
